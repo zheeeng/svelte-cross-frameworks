@@ -3,9 +3,11 @@ import { extractEventMapFromProps } from './utils'
 import type { SvelteComponentType, SvelteComponentInstance, SveltePropsToProps } from './utils'
 
 export function createReactComponent<Component extends SvelteComponentType>(svelteComponent: Component): Component extends SvelteComponentType<infer P, infer E> ? React.ComponentType<SveltePropsToProps<P, E>> : never {
-  function ReactComponent(props: Record<string, any>) {
+  const ReactComponent = React.memo(React.forwardRef<SvelteComponentInstance, Record<string, any>>(function ReactComponent(props, ref) {
     const targetRef = React.useRef()
     const componentRef = React.useRef<SvelteComponentInstance>()
+
+    React.useImperativeHandle(ref, () => componentRef.current!)
 
     const eventEntries = React.useMemo(() => Array.from(extractEventMapFromProps(props)), [props])
 
@@ -36,7 +38,7 @@ export function createReactComponent<Component extends SvelteComponentType>(svel
     }, [props])
 
     return React.createElement('div', { ref: targetRef })
-  }
+  }))
 
   ReactComponent.displayName = svelteComponent.name
 
