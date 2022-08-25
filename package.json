@@ -1,0 +1,41 @@
+{
+  "name": "svelte-cross-frameworks",
+  "version": "0.0.1",
+  "description": "Wrapper for Svelte cross-frameworks",
+  "keywords": [
+    "svelte",
+    "react",
+    "vue",
+    "svelte-wrapper",
+    "svelte-binding",
+    "svelte-converter",
+    "svelte-to-react",
+    "svelte-to-vue",
+    "cross-frameworks"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zheeeng/svelte-cross-frameworks.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zheeeng/svelte-cross-frameworks/issues"
+  },
+  "homepage": "https://github.com/zheeeng/svelte-cross-frameworks#readme",
+  "devDependencies": {
+    "@types/react": "^16.8.0",
+    "svelte": "^3.49.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.8.9",
+    "vue": "^2.5.0"
+  }
+}
