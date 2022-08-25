@@ -19,7 +19,10 @@ export function createReactComponent<Component extends SvelteComponentType>(svel
       componentRef.current = new svelteComponent({ target: targetRef.current, props })
 
 
-      return () => componentRef.current?.$destroy?.()
+      return () => {
+        componentRef.current?.$destroy?.()
+        componentRef.current = undefined
+      }
     }, [])
 
     React.useEffect(
