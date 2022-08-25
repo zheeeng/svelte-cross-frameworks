@@ -1,6 +1,6 @@
 {
   "name": "svelte-cross-frameworks",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Wrapper for Svelte cross-frameworks",
   "keywords": [
     "svelte",
