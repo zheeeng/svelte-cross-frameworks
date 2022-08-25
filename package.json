@@ -1,6 +1,6 @@
 {
   "name": "svelte-cross-frameworks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wrapper for Svelte cross-frameworks",
   "keywords": [
     "svelte",
@@ -20,6 +20,9 @@
   "scripts": {
     "build": "unbuild"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zheeeng/svelte-cross-frameworks.git"
