@@ -9,8 +9,8 @@ export type SveltePropsToProps<
     : never
 }
 
-export type SvelteComponentType<P = any, E = any> = typeof SvelteComponentTyped<P, E>
-export type SvelteComponentInstance<P = any, E = any> = SvelteComponentTyped<P, E>
+export type SvelteComponentType<P extends Record<string, any> = any, E extends Record<string, any> = any> = typeof SvelteComponentTyped<P, E>
+export type SvelteComponentInstance<P extends Record<string, any> = any, E extends Record<string, any> = any> = SvelteComponentTyped<P, E>
 
 const conventionalEventHandlerPredicate = (maybeEventName: string): string | false => {
   const match = maybeEventName.match(/^(on)([A-Z])(.*)/)

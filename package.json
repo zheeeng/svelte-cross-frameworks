@@ -35,10 +35,14 @@
   "homepage": "https://github.com/zheeeng/svelte-cross-frameworks#readme",
   "devDependencies": {
     "@types/react": "^16.8.0",
-    "svelte": "^3.49.0",
-    "tslib": "^2.4.0",
-    "typescript": "^4.7.4",
+    "svelte": "^3.57.0",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5",
     "unbuild": "^0.8.9",
-    "vue": "^2.5.0"
+    "vue": "^3.2.37"
+  },
+  "optionalDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "vue": "^3.0.0"
   }
 }

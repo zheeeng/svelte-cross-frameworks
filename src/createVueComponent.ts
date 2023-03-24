@@ -48,5 +48,5 @@ export function createVueComponent<Component extends SvelteComponentType>(svelte
     render () {
       return Vue.h('div', { ref: 'targetRef' })
     }
-  }) as any
+  }) as never
 }
