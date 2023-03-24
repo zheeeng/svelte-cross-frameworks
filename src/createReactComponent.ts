@@ -45,6 +45,6 @@ export function createReactComponent<Component extends SvelteComponentType>(svel
 
   ReactComponent.displayName = svelteComponent.name
 
-  return ReactComponent as any
+  return ReactComponent as never
 }
 
