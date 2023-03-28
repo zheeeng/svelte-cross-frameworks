@@ -16,9 +16,9 @@ const conventionalEventHandlerPredicate = (maybeEventName: string): string | fal
   const match = maybeEventName.match(/^(on)([A-Z])(.*)/)
 
   if (match) {
-    const [_, cap, resetEventName] = match
+    const [_, cap, ...resetEventName] = match
 
-    return cap.toLowerCase() + resetEventName
+    return cap.toLowerCase() + resetEventName.join('')
   }
 
   return false
