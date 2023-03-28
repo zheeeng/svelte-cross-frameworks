@@ -27,7 +27,7 @@
     "type": "git",
     "url": "git+https://github.com/zheeeng/svelte-cross-frameworks.git"
   },
-  "author": "",
+  "author": "Zheeeng <hi@zheeeng.me>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zheeeng/svelte-cross-frameworks/issues"
