@@ -4,7 +4,7 @@ export type SveltePropsToProps<
   Props extends Record<string, any>,
   Events extends Record<string, any>
 > = Props & {
-  [evt in keyof Events as `on${Capitalize<evt & string>}`]?: Events[evt] extends CustomEvent<infer P>
+  [evt in keyof Events as `on${Capitalize<evt & string>}`]?: Events[evt] extends infer P
     ? (payload: P) => void
     : never
 }
